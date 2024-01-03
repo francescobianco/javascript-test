@@ -1,0 +1,20 @@
+{
+  "pizze": [
+    {
+      "nome": "Margherita",
+      "descrizione": "Pizza classica con pomodoro, mozzarella, basilico e olio d'oliva."
+    },
+    {
+      "nome": "Quattro Formaggi",
+      "descrizione": "Pizza con quattro formaggi: mozzarella, gorgonzola, parmigiano e taleggio."
+    },
+    {
+      "nome": "Peperoni e Salsiccia",
+      "descrizione": "Pizza con peperoni, salsiccia, pomodoro e mozzarella."
+    },
+    {
+      "nome": "Capricciosa",
+      "descrizione": "Pizza con pomodoro, mozzarella, funghi, prosciutto cotto, olive e carciofi."
+    }
+  ]
+}
