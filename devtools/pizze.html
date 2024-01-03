@@ -18,7 +18,7 @@
     console.log("Inizio stampa pagina")
   </script>
     
-  <h1>Hello, world!</h1>
+  <h1>Hello, Pizza!</h1>
 
   <ul class="my-menu">
     <li id="item-1"><a href="">link</a></li>
@@ -26,18 +26,16 @@
 
   <img src="assets/images/image.jpg" width="100" />
 
-  <table id="pizze">
-  </table>
+  <table id="pizze" border="1"></table>
 
   <script>
-    fetch("api/pizze.json")
+    fetch("https://raw.githubusercontent.com/francescobianco/javascript-test/main/devtools/api/pizze.json")
       .then(response => response.json())
-      .then(pizze => {
-          console.log(pizze);
+      .then(json => {
           let listaPizze = "";
-          rows.forEach((values => {
-              tableData += `<tr><td>${values.Bill}</td><td>${values.Action}</td></tr>`;
-          }))
+          json.pizze.forEach(pizza => {
+            listaPizze += `<tr><td>${pizza.nome}</td><td>${pizza.descrizione}</td></tr>`;
+          });
           document.getElementById("pizze").innerHTML = listaPizze;
       })
       .catch(console.error)
