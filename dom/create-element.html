@@ -32,18 +32,18 @@
 
   <script>
     
-    const elementH1 = document.getElementsByTagName('h1')[0];
-    const elementP = document.getElementsByTagName('p')[0];
     const elementUl = document.getElementsByTagName('ul')[0];
     
-    const elementLi = elementUl.firstElementChild;
+    const newElementLi = document.createElement("li");
+    const newElementA = document.createElement("a");
 
-    elementH1.innerText = "Hello World!!!!!!";
+    newElementA.innerText = "Menu 4";
+    newElementA.href = "";
 
-    elementP.style.textAlign = "center";
-
-    elementLi.style.backgroundColor = "red";
-
+    newElementLi.appendChild(newElementA)
+    
+    elementUl.appendChild(newElementLi);
+    
   </script>
       
 </body>

@@ -28,21 +28,24 @@
       <li id="menu-3"><a href="">Menu 3</a></li>
     </ul>
 
+    <button id="add-button" type="button">Aggiungi una voce di menu</button>
+
   </div>
 
   <script>
     
-    const elementH1 = document.getElementsByTagName('h1')[0];
-    const elementP = document.getElementsByTagName('p')[0];
     const elementUl = document.getElementsByTagName('ul')[0];
+    const elementButton = document.getElementById('add-button');
     
-    const elementLi = elementUl.firstElementChild;
-
-    elementH1.innerText = "Hello World!!!!!!";
-
-    elementP.style.textAlign = "center";
-
-    elementLi.style.backgroundColor = "red";
+    elementButton.addEventListener("click", function() {
+      const menuText = prompt("Digita la voce di menu", "Menu...");
+      const newElementLi = document.createElement("li");
+      const newElementA = document.createElement("a");
+      newElementA.innerText = menuText;
+      newElementA.href = "";
+      newElementLi.appendChild(newElementA)
+      elementUl.appendChild(newElementLi);
+    });
 
   </script>
       
