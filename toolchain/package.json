@@ -1,0 +1,15 @@
+{
+  "name": "mypizza",
+  "version": "0.1.0",
+  "description": "Gestione pizzerie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "simple-tts-mp3": "^1.1.0",
+    "xml-js": "^1.6.11"
+  }
+}
