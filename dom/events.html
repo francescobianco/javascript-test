@@ -16,6 +16,10 @@
 
     <h1 id="title">Hello, world!</h1>
     
+    <button id="left-button" type="button">LEFT</button>
+    <button id="center-button" type="button">CENTER</button>
+    <button id="right-button" type="button">RIGHT</button>
+
     <p id="content">
       Paragrafo di testo
     </p>
@@ -35,6 +39,7 @@
   <script>
     
     const elementUl = document.getElementsByTagName('ul')[0];
+    const elementP = document.getElementsByTagName('p')[0];
     const elementButton = document.getElementById('add-button');
     
     elementButton.addEventListener("click", function() {
@@ -47,6 +52,22 @@
       elementUl.appendChild(newElementLi);
     });
 
+    const elementLeftButton = document.getElementById('left-button');
+    const elementCenterButton = document.getElementById('center-button');
+    const elementRightButton = document.getElementById('right-button');
+  
+    elementLeftButton.addEventListener("click", function() {
+      elementP.style.textAlign = "left";
+    });
+
+    elementCenterButton.addEventListener("click", function() {
+      elementP.style.textAlign = "center";
+    });
+    
+    elementRightButton.addEventListener("click", function() {
+      elementP.style.textAlign = "right";
+    });
+  
   </script>
       
 </body>
