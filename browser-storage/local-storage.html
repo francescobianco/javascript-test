@@ -14,14 +14,28 @@
 
   <h1>Hello, world!</h1>
 
-  <p>This is an example page.</p>
+  <p>La mia piazza preferita è: <strong id="pizza">     </strong></p>
+
+  <button id="set-button" type="button">Imposta Pizza Preferita</button>
 
   <script type="text/javascript">
     
-    for (let i = 1; i <= 5; i++) {
-      document.write(i + " Written by JavaScript <br>");
-    }
-   
+    const elementButton = document.getElementById("set-button");
+    const elementPizza = document.getElementById("pizza");
+
+    // codice che prende dal local storage il gusto di pizza preferito 
+    // eseguito direttamente al caricamento della pagina 
+    const pizzaName = localStorage.getItem("my_preferred_pizza") || "";
+    elementPizza.innerText = pizzaName;
+      
+    elementButton.addEventListener("click", function() {
+      // codice che conserva nel local storage il mio nuovo gusto di pizza preferito
+      // eseguito al click dell'utente sul botton apposito
+      const pizzaName = prompt("Qual'è la tua pizza preferita", "Piazza")
+      localStorage.setItem("my_preferred_pizza", pizzaName);
+      elementPizza.innerText = pizzaName 
+    })
+  
   </script>
 </body>
 
