@@ -18,17 +18,18 @@
 
   <script type="text/javascript">
     
-    let totale = 0;
-    let conteggio = 0;
-    
-    while (totale + conteggio < 1000) {
-      document.write("<span>" + conteggio + "</span>, ");
-      totale = totale + conteggio
-      conteggio++;
+    function Persona(nome, cognome, eta) {
+      this.nome = nome;
+      this.cognome = cognome;
+      this.eta = eta;
     }
+      
+    Persona.prototype.cittadinanza = "Italiana"
 
-    document.write("<p>Totale: " + totale + "</p>");
-  
+    let mario = new Persona("Mario", "Rossi", 40)
+
+    document.write(mario.cittadinanza)
+
   </script>
 </body>
 

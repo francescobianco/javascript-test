@@ -19,11 +19,10 @@
   <script type="text/javascript">
     
     let totale = 0;
+    const limiteDelFor = 10;
 
-    for (riga = 0; riga < 10; riga++) {
-      if (riga % 2 == 0) {
-        totale = totale + riga;
-      }
+    for (let riga = 0; riga < limiteDelFor; riga = riga + 2) {
+      totale = totale + riga;
     }
 
     document.write(totale);

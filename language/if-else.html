@@ -17,18 +17,19 @@
   <p>This is an example page.</p>
 
   <script type="text/javascript">
-    
-    let totale = 0;
-    let conteggio = 0;
-    
-    while (totale + conteggio < 1000) {
-      document.write("<span>" + conteggio + "</span>, ");
-      totale = totale + conteggio
-      conteggio++;
+
+    const numero = 22;
+
+    if (numero < 10) {
+      document.write("Numero è troppo piccolo");  
+    } else if (numero < 20) {
+      document.write("Numero è ottimo");      
+    } else if (numero < 30) {
+      document.write("Numero è addatto ma non al 100% dei casi");  
+    } else {
+      document.write("Numero è troppo grande");  
     }
 
-    document.write("<p>Totale: " + totale + "</p>");
-  
   </script>
 </body>
 

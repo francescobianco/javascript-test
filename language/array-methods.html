@@ -18,17 +18,15 @@
 
   <script type="text/javascript">
     
-    let totale = 0;
-    let conteggio = 0;
-    
-    while (totale + conteggio < 1000) {
-      document.write("<span>" + conteggio + "</span>, ");
-      totale = totale + conteggio
-      conteggio++;
-    }
+    let sonoUnArray = [];
+    let nonSonoUnArray = {};
 
-    document.write("<p>Totale: " + totale + "</p>");
-  
+    if (Array.isArray(nonSonoUnArray)) {
+      document.write("Il contenuto è un Array")
+    } else {
+      document.write("Il contenuto NON è un Array")
+    }
+    
   </script>
 </body>
 

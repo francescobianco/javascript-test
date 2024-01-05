@@ -18,17 +18,23 @@
 
   <script type="text/javascript">
     
-    let totale = 0;
-    let conteggio = 0;
-    
-    while (totale + conteggio < 1000) {
-      document.write("<span>" + conteggio + "</span>, ");
-      totale = totale + conteggio
-      conteggio++;
+    function creaUnSommatore(valore1) {
+      const valoreDelSommatore = valore1
+
+      function faiLaSomma(valore2) {
+        return valoreDelSommatore + valore2
+      }  
+
+      return faiLaSomma
     }
 
-    document.write("<p>Totale: " + totale + "</p>");
-  
+    let sommaDieciCon = creaUnSommatore(10)
+    let sommaVentiCon = creaUnSommatore(20)
+
+    document.write(sommaDieciCon(3)+"<br>")
+    document.write(sommaVentiCon(3)+"<br>")
+
+
   </script>
 </body>
 

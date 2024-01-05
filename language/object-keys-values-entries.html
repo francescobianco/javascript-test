@@ -25,25 +25,17 @@
         "Margherita",
         "Capricciosa"
       ],
-      indirizzoConsegna: {
+      indirizzoDiConsegna: {
         via: "Roma",
         comune: "Milano",
         civico: 32
       }
     };
 
-    //sampleObject.nome = "Luigi";
+    document.write("Keys: " + Object.keys(sampleObject) + "<br/>")
+    document.write("Values: " + Object.values(sampleObject) + "<br/>")
+    document.write("Entries: " + Object.entries(sampleObject) + "<br/>")
 
-    document.write("Il mio Object contine questo campo nome: " + sampleObject.nome + "<br>")
-    document.write("Comune di appartenzenza: " + sampleObject.indirizzoConsegna.comune + "<br>")
-
-    for (let proprieta in sampleObject) {
-      let valore = sampleObject[proprieta];
-      document.write("<p>Proprietà: " + proprieta + " => " + valore + "</p>")
-    }
-   
-
-    
   </script>
 </body>
 

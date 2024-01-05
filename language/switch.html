@@ -17,18 +17,24 @@
   <p>This is an example page.</p>
 
   <script type="text/javascript">
-    
-    let totale = 0;
-    let conteggio = 0;
-    
-    while (totale + conteggio < 1000) {
-      document.write("<span>" + conteggio + "</span>, ");
-      totale = totale + conteggio
-      conteggio++;
-    }
 
-    document.write("<p>Totale: " + totale + "</p>");
-  
+    const numero = 22;
+
+    switch (numero) {
+      case 1: 
+        document.write("Uno!")
+        break
+      case 2:
+        document.write("Due!")
+        break
+      case 3:
+        document.write("Tre!")
+        break
+      default:
+        document.write("Numero non valido!")
+    }
+      
+
   </script>
 </body>
 
