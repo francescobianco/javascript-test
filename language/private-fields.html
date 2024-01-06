@@ -23,24 +23,32 @@
       cognome = ""
       eta = 0
 
-      static pianeta = "Terra"
-
+      #nomeCompleto
+      
       constructor(nome, cognome, eta) {
         this.nome = nome
         this.cognome = cognome
         this.eta = eta
+
+        this.#nomeCompleto = nome + " " + cognome
       }
 
-      static creaGemelloPaolo(persona) {
-        let gemello = new Persona("Paolo", persona.cognome, persona.eta)
+      #aumentaEta() {
+        this.eta = this.eta + 1;
+      }
 
-        return gemello
+      festeggiaCompleanno() {
+        this.#aumentaEta();
       }
     }
 
     let mario = new Persona("Mario", "Rossi", 42);
-    let paolo = Persona.creaGemelloPaolo(mario)
     
+    mario.#nomeCompleto
+    mario.#aumentaEta()
+
+    mario.festeggiaCompleanno();
+
   </script>
 </body>
 

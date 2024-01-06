@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=2">
+  <style>html{zoom:150%;}</style>
+</head>
+
+<body>
+
+  <h1>Hello, world!</h1>
+
+  <p>This is an example page.</p>
+
+  <script type="text/javascript">
+
+    class Cerchio {
+      raggio = 0
+
+      constructor(raggio) {
+        this.raggio = raggio
+      }
+    }
+
+    class Rettangolo {
+      base = 0
+      altezza = 0
+
+      constructor(base, altezza) {
+        this.base = base
+        this.altezza = altezza
+      }
+    }
+    
+    let figura = new Array(10, 30)
+
+    if (figura instanceof Cerchio) {
+      document.write("La figura è un CERCHIO")
+    } else if (figura instanceof Rettangolo) {
+      document.write("La figura è un RETTANGOLO")
+    } else if (figura instanceof Array) {
+      document.write("La figura è un ARRAY")
+    } else {
+      document.write("La figura NON è ne un CERCHIO ne un RETTANGOLO")
+    }
+
+  </script>
+</body>
+
+</html>
