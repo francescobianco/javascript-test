@@ -16,16 +16,25 @@
 
   <p>This is an example page.</p>
 
-  <script type="text/javascript">
-
+  <script type="text/javascript">  
     let mario = ["Mario Rossi", "Pizzaiolo"]
     
     let [nome, mansione] = mario
-
+    
     document.write("Nome: " + nome + "<br/>")
     document.write("Mansione: " + mansione + "<br/>")
 
     document.write("<hr/>")
+
+    let messaggio = {
+      titolo: "Saluti da Mario", 
+      testo: "Ciao come stai? La tua pizza è pronta!"
+    }
+    
+    let {titolo, testo} = messaggio
+    
+    document.write("Titolo: " + messaggio.titolo + "<br/>")
+    document.write("Testo: " + testo + "<br/>")
 
   </script>
 </body>
