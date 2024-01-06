@@ -17,16 +17,19 @@
   <p>This is an example page.</p>
 
   <script type="text/javascript">
-   
-    try {
-      questaFunzioneNonEsiste();  
-    } catch (errore) {
-      alert("Problema nell'applicazione! Contattare l'assistenza.");
-      console.error(errore)
+
+    async function attendiCaricamentoDelRisultato() {
+      // operazione complessa di caricamento del risultato
+      return "Risultato"
+    }
+            
+    async function inizio() {
+      let risultato = await attendiCaricamentoDelRisultato()
+      console.log(risultato)
     }
 
-    document.write("Flusso del mio programma!")
-
+    inizio();
+    
   </script>
 </body>
 

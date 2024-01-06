@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=2">
+  <style>html{zoom:150%;}</style>
+</head>
+
+<body>
+
+  <h1>Hello, world!</h1>
+
+  <p>This is an example page.</p>
+
+  <script type="text/javascript">
+
+    function funzionePrincipale(valore1, valore2, callback) {
+      callback(valore1 + valore2)
+    }
+
+    funzionePrincipale(2, 3, function(risultato) {
+      document.write("Risultato: ", risultato)
+    })
+
+    // istruzzioni successive senza aspettare l'attesa del completamente delle operani precedenti
+
+
+
+    function funzioneSomma(valore1, valore2) {
+      return valore1 + valore2
+    }
+
+    let risultato = funzioneSomma(2, 3)
+    document.write("Risultato: ", risultato)
+
+
+
+  </script>
+</body>
+
+</html>
